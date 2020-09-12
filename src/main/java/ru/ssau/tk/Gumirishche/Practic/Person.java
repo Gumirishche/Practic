@@ -28,4 +28,20 @@ public class Person {
     void setPassportId(int passportId) {
         this.passportId = passportId;
     }
+
+    void konstr1() {
+        return;
+    }
+
+    void konstr2(String firstName, String lastName) {
+        return;
+    }
+
+    void konstr3(int passportId) {
+        return;
+    }
+
+    void konstr4(int passportId, String firstName, String lastName) {
+        return;
+    }
 }
