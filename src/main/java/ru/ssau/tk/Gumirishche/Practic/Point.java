@@ -2,8 +2,15 @@ package ru.ssau.tk.Gumirishche.Practic;
 
 public class Point {
 
+    public Point(double X, double Y, double Z) {
+        final double x = X;
+        final double y = Y;
+        final double z = Z;
+    }
 
-    public final double x = 0;
-    public final double y = 0;
-    public final double z = 0;
+    public static void main(String[] args) {
+        Point point1 = new Point(1, 2, 3);
+        Point point2 = new Point(3, 2, 1);
+    }
 }
+
