@@ -46,12 +46,17 @@ public class Points extends Point {
         System.out.println(x.z);
     }
 
-    public Points enlarge(Points x,double y){
+    public Points enlarge(Points x, double y) {
         double ox = x.x * y;
         double oy = x.y * y;
         double oz = x.z * y;
         Points point = new Points(ox, oy, oz);
         return point;
+    }
+
+    @Override
+    public double length(Point x) {
+        return x.length(x);
     }
 
     public static void main(String[] args) {

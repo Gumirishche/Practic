@@ -1,5 +1,7 @@
 package ru.ssau.tk.Gumirishche.Practic;
 
+import java.lang.Math;
+
 public class Point {
     public final double x;
     public final double y;
@@ -9,6 +11,10 @@ public class Point {
         this.x = x;
         this.y = y;
         this.z = y;
+    }
+
+    public double length(Point x) {
+        return Math.sqrt(x.x + x.y + x.z);
     }
 
     public static void main(String[] args) {
