@@ -75,6 +75,21 @@ public class Points extends Point {
         return point;
     }
 
+    public double scalarProduct(Points x, Points y) {
+        double ox = x.x * y.x;
+        double oy = x.y * y.y;
+        double oz = x.z * y.z;
+        return ox + oy + oz;
+    }
+
+    public Points vectorProduct(Points x, Points y) {
+        double ox = (x.y * y.z) - (x.z * y.y);
+        double oy = -((x.x * y.z) - (x.z * y.x));
+        double oz = (x.x * y.y) - (x.y * y.x);
+        Points point = new Points(ox, oy, oz);
+        return point;
+    }
+
     public static void main(String[] args) {
         Points point1 = new Points(1, 2, 3);
         Points point2 = new Points(3, 2, 1);
