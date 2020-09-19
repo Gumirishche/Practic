@@ -59,6 +59,22 @@ public class Points extends Point {
         return x.length(x);
     }
 
+    public Points opposite(Points x) {
+        double ox = -x.x;
+        double oy = -x.y;
+        double oz = -x.z;
+        Points point = new Points(ox, oy, oz);
+        return point;
+    }
+
+    public Points inverse(Points x) {
+        double ox = 1 / x.x;
+        double oy = 1 / x.y;
+        double oz = 1 / x.z;
+        Points point = new Points(ox, oy, oz);
+        return point;
+    }
+
     public static void main(String[] args) {
         Points point1 = new Points(1, 2, 3);
         Points point2 = new Points(3, 2, 1);
