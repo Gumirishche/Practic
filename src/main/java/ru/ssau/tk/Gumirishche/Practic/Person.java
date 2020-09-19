@@ -5,39 +5,15 @@ public class Person {
     private String lastName;
     private int passportId;
 
-    void Konstr1() {
-        firstName="Gumir";
-        lastName="Ishanov";
-        passportId=647457;
-    }
-
-    void Konstr2(String firstName, String lastName) {
-        this.firstName=firstName;
-        this.lastName=lastName;
-        passportId=647457;
-    }
-
-    void Konstr3(int passportId) {
-        this.passportId=passportId;
-        firstName="Gumir";
-        lastName="Ishanov";
-    }
-
-    void Konstr4(int passportId, String firstName, String lastName) {
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.passportId=passportId;
-    }
-
-    String getFirstName() {
+    public String getFirstName() {
         return firstName = firstName;
     }
 
-    String getLastName() {
+    public String getLastName() {
         return lastName = lastName;
     }
 
-    int getPassportId() {
+    public int getPassportId() {
         return passportId = passportId;
     }
 
@@ -53,5 +29,15 @@ public class Person {
         this.passportId = passportId;
     }
 
-
+    public static void main(String[] args) {
+        Person person1=new Person();
+        person1.setFirstName("Gumir");
+        person1.setLastName("Ishanov");
+        person1.setPassportId(3463473);
+        Person person2=new Person();
+        person2.setFirstName("Danil");
+        person2.setLastName("Diu");
+        person2.setPassportId(1254135);
+    }
 }
+
