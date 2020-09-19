@@ -9,32 +9,28 @@ public class Points extends Point {
         double ox = x.x + y.x;
         double oy = x.y + y.y;
         double oz = x.z + y.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public static Points subtract(Points x, Points y) {
         double ox = x.x - y.x;
         double oy = x.y - y.y;
         double oz = x.z - y.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public static Points multiply(Points x, Points y) {
         double ox = x.x * y.x;
         double oy = x.y * y.y;
         double oz = x.z * y.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public static Points divide(Points x, Points y) {
         double ox = x.x / y.x;
         double oy = x.y / y.y;
         double oz = x.z / y.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public static void printPoint(Points x) {
@@ -50,8 +46,7 @@ public class Points extends Point {
         double ox = x.x * y;
         double oy = x.y * y;
         double oz = x.z * y;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     @Override
@@ -63,36 +58,33 @@ public class Points extends Point {
         double ox = -x.x;
         double oy = -x.y;
         double oz = -x.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public Points inverse(Points x) {
         double ox = 1 / x.x;
         double oy = 1 / x.y;
         double oz = 1 / x.z;
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
-    public double scalarProduct(Points x, Points y) {
+    public static double scalarProduct(Points x, Points y) {
         double ox = x.x * y.x;
         double oy = x.y * y.y;
         double oz = x.z * y.z;
         return ox + oy + oz;
     }
 
-    public Points vectorProduct(Points x, Points y) {
+    public static Points vectorProduct(Points x, Points y) {
         double ox = (x.y * y.z) - (x.z * y.y);
         double oy = -((x.x * y.z) - (x.z * y.x));
         double oz = (x.x * y.y) - (x.y * y.x);
-        Points point = new Points(ox, oy, oz);
-        return point;
+        return new Points(ox, oy, oz);
     }
 
     public static void main(String[] args) {
         Points point1 = new Points(1, 2, 3);
-        Points point2 = new Points(3, 2, 1);
+        Points point2 = new Points(2, 2, 2);
         Points pointSum = sum(point1, point2);
         Points pointSubtract = subtract(point1, point2);
         Points pointMultiply = multiply(point1, point2);
