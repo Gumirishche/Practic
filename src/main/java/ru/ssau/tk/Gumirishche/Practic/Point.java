@@ -1,11 +1,13 @@
 package ru.ssau.tk.Gumirishche.Practic;
 
 public class Point {
-
-    public Point(double X, double Y, double Z) {
-        final double x = X;
-        final double y = Y;
-        final double z = Z;
+        public final double x;
+        public final double y;
+        public final double z;
+    public Point(double x, double y, double z) {
+        this.x=x;
+        this.y=y;
+        this.z=y;
     }
 
     public static void main(String[] args) {
