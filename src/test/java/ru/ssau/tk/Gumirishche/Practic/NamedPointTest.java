@@ -32,4 +32,11 @@ public class NamedPointTest {
         assertEquals(point3.getName(), "A");
     }
 
+    @Test
+    public void testNamedPointReset() {
+        assertEquals(point3.getName(), "A");
+        point3.reset();
+        assertEquals(point3.getName(), "Absent");
+    }
+
 }
