@@ -62,5 +62,6 @@ public class PrintType {
         Object object2 = new Points(1, 2, 3);
         printType.printType(object1);
         printType.printType(object2);
+        printType.printType(null);
     }
 }
