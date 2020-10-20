@@ -9,8 +9,9 @@ public class Massif2_6Test {
 
     @Test
     public void testSqrMass() {
+        assertEquals(massif2_6.sqrMass(4), new int[]{0, 1, 4, 9});
         assertEquals(massif2_6.sqrMass(5), new int[]{0, 1, 4, 9, 16});
         assertEquals(massif2_6.sqrMass(6), new int[]{0, 1, 4, 9, 16, 25});
-        assertEquals(massif2_6.sqrMass(7), new int[]{0, 1, 4, 9, 16, 25, 36});
     }
+
 }
