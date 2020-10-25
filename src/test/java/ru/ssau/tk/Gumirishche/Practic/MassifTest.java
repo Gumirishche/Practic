@@ -17,4 +17,11 @@ public class MassifTest {
         assertEquals(massif01.massifSize(30), massif04);
     }
 
+    @Test
+    public void testArithmeticMassif() {
+        assertEquals(massif01.arithmeticMassif(5, 1, 6), new int[]{1, 7, 13, 19, 25});
+        assertEquals(massif01.arithmeticMassif(1, 6, 13515), new int[]{6});
+        assertEquals(massif01.arithmeticMassif(3, 20, -20), new int[]{20, 0, -20});
+    }
+
 }
