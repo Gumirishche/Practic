@@ -58,6 +58,18 @@ public class Massif {
         return massif;
     }
 
+    public int[] simpleMassif(int last){
+        boolean simple=true;
+
+        for(int j=2;j<=last;j++){
+        for(int i=2;i<j;i++){
+            if(j%i==0){
+                break;
+            }
+        }
+        }
+    }
+
     public void paint(int[] x) {
         for (int i = 0; i < x.length; i++) {
             System.out.println(x[i]);
