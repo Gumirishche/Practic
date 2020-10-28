@@ -46,7 +46,7 @@ public class Massif {
     }
 
     public int[] divisionMassif(int number) {
-        int size = (int) ((number / (Math.sqrt(number)))-1);
+        int size = (int) ((number / (Math.sqrt(number))) - 1);
         int[] massif = new int[size];
         int j = 0;
         for (int i = 1; i <= Math.sqrt(number); i++) {
@@ -58,16 +58,33 @@ public class Massif {
         return massif;
     }
 
-    public int[] simpleMassif(int last){
-        boolean simple=true;
-
-        for(int j=2;j<=last;j++){
-        for(int i=2;i<j;i++){
-            if(j%i==0){
-                break;
+    public int[] simpleMassif(int last) {
+        boolean simple;
+        int size = (int) Math.round(last / Math.log1p(last));
+        int[] massif = new int[size + 1];
+        int l=0;
+        massif[0] = 2;
+        for (int h = 1; h < size; h++) {
+            for (int j=3+l; j <= last; j++) {
+                simple = true;
+                for (int i = 2; i < j; i++) {
+                    if (j % i == 0) {
+                        simple = false;
+                        break;
+                    }
+                }
+                if (simple) {
+                    massif[h] = j;
+                    break;
+                }
+                else{
+                continue;
+                }
             }
+            l++;
+
         }
-        }
+        return massif;
     }
 
     public void paint(int[] x) {
@@ -94,6 +111,6 @@ public class Massif {
         Massif x = new Massif();
         /*x.paint(x.arithmeticMassif(5, 1, 6));
         x.paint(3,1,0.1);*/
-        x.paint(x.divisionMassif(36));
+        x.paint(x.simpleMassif(13));
     }
 }

@@ -50,4 +50,9 @@ public class MassifTest {
         assertEquals(massif01.divisionMassif(36), new int[]{1, 2, 3, 4, 6});
     }
 
+    @Test
+    public void testSimpleMassif(){
+        assertEquals(massif01.simpleMassif(13),new int[]{2,3,5,7,11,13});
+    }
+
 }
