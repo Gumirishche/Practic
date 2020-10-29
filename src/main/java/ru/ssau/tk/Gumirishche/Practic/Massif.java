@@ -64,7 +64,8 @@ public class Massif {
         int[] massif = new int[size + 1];
         int l=0;
         massif[0] = 2;
-        for (int h = 1; h < size; h++) {
+        for (int h = 1; h < size+1; h++) {
+            int k=0;
             for (int j=3+l; j <= last; j++) {
                 simple = true;
                 for (int i = 2; i < j; i++) {
@@ -78,11 +79,13 @@ public class Massif {
                     break;
                 }
                 else{
+                    k++;
                 continue;
+
                 }
             }
             l++;
-
+            l=l+k;
         }
         return massif;
     }
@@ -111,6 +114,6 @@ public class Massif {
         Massif x = new Massif();
         /*x.paint(x.arithmeticMassif(5, 1, 6));
         x.paint(3,1,0.1);*/
-        x.paint(x.simpleMassif(13));
+        x.paint(x.simpleMassif(24));
     }
 }
