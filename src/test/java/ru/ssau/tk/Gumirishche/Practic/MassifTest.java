@@ -51,10 +51,12 @@ public class MassifTest {
     }
 
     @Test
-    public void testSimpleMassif(){
-        assertEquals(massif01.simpleMassif(13),new int[]{2,3,5,7,11,13});
-        assertEquals(massif01.simpleMassif(22),new int[]{2,3,5,7,11,13,17,19});
-        assertEquals(massif01.simpleMassif(7),new int[]{2,3,5,7});
+    public void testSimpleMassif() {
+        assertEquals(massif01.simpleMassif(13), new int[]{2, 3, 5, 7, 11, 13});
+        assertEquals(massif01.simpleMassif(22), new int[]{2, 3, 5, 7, 11, 13, 17, 19});
+        assertEquals(massif01.simpleMassif(7), new int[]{2, 3, 5, 7});
+        assertEquals(massif01.simpleMassif(35), new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31});
+        assertEquals(massif01.simpleMassif(-10), new int[]{});
     }
 
 }

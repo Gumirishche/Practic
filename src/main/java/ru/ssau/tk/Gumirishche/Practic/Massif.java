@@ -59,35 +59,51 @@ public class Massif {
     }
 
     public int[] simpleMassif(int last) {
-        boolean simple;
-        int size = (int) Math.round(last / Math.log1p(last));
-        int[] massif = new int[size + 1];
-        int l=0;
-        massif[0] = 2;
-        for (int h = 1; h < size+1; h++) {
-            int k=0;
-            for (int j=3+l; j <= last; j++) {
+        if (last <= 1) {
+            System.out.println("the number must be greater than 1.");
+            return new int[]{};
+        } else {
+            boolean simple;
+        /*int size = (int) Math.round(last / Math.log1p(last));
+        int[] massif = new int[size + 1];*/
+            int size = 0;
+            for (int jSize = 3; jSize <= last; jSize++) {
                 simple = true;
-                for (int i = 2; i < j; i++) {
-                    if (j % i == 0) {
+                for (int iSize = 2; iSize < jSize; iSize++) {
+                    if (jSize % iSize == 0) {
                         simple = false;
                         break;
                     }
                 }
                 if (simple) {
-                    massif[h] = j;
-                    break;
-                }
-                else{
-                    k++;
-                continue;
-
+                    size++;
                 }
             }
-            l++;
-            l=l+k;
+            int[] massif = new int[size + 1];
+            int term = 0;
+            massif[0] = 2;
+            for (int h = 1; h < size + 1; h++) {
+                int secTerm = 0;
+                for (int j = 3 + term; j <= last; j++) {
+                    simple = true;
+                    for (int i = 2; i < j; i++) {
+                        if (j % i == 0) {
+                            simple = false;
+                            break;
+                        }
+                    }
+                    if (simple) {
+                        massif[h] = j;
+                        break;
+                    } else {
+                        secTerm++;
+                    }
+                }
+                term++;
+                term = term + secTerm;
+            }
+            return massif;
         }
-        return massif;
     }
 
     public void paint(int[] x) {
