@@ -59,4 +59,9 @@ public class MassifTest {
         assertEquals(massif01.simpleMassif(-10), new int[]{});
     }
 
+    @Test
+    public void testSymmetricMassif() {
+        assertEquals(massif01.symmetricMassif(5), new int[]{1, 2, 3, 2, 1});
+        assertEquals(massif01.symmetricMassif(6), new int[]{1, 2, 3, 3, 2, 1});
+    }
 }

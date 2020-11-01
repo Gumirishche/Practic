@@ -106,6 +106,31 @@ public class Massif {
         }
     }
 
+    public int[] symmetricMassif(int size) {
+        int[] massif = new int[size];
+        if (size % 2 == 0) {
+            int l = size / 2;
+            for (int i = 0; i < size / 2; i++) {
+                massif[i] = i + 1;
+            }
+            for (int j = size / 2; j < size; j++) {
+                massif[j] = l;
+                l--;
+            }
+            return massif;
+        } else {
+            int l = size / 2;
+            for (int i = 0; i < size / 2 + 1; i++) {
+                massif[i] = i + 1;
+            }
+            for (int j = size / 2 + 1; j < size; j++) {
+                massif[j] = l;
+                l--;
+            }
+            return massif;
+        }
+    }
+
     public void paint(int[] x) {
         for (int i = 0; i < x.length; i++) {
             System.out.println(x[i]);
