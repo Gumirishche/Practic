@@ -108,8 +108,8 @@ public class Massif {
 
     public int[] symmetricMassif(int size) {
         int[] massif = new int[size];
+        int l = size / 2;
         if (size % 2 == 0) {
-            int l = size / 2;
             for (int i = 0; i < size / 2; i++) {
                 massif[i] = i + 1;
             }
@@ -117,9 +117,7 @@ public class Massif {
                 massif[j] = l;
                 l--;
             }
-            return massif;
         } else {
-            int l = size / 2;
             for (int i = 0; i < size / 2 + 1; i++) {
                 massif[i] = i + 1;
             }
@@ -127,8 +125,8 @@ public class Massif {
                 massif[j] = l;
                 l--;
             }
-            return massif;
         }
+        return massif;
     }
 
     public void paint(int[] x) {
