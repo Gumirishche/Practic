@@ -129,6 +129,16 @@ public class Massif {
         return massif;
     }
 
+    public void oppositeMassif(int[] massif) {
+        for (int i = 0; i < massif.length; i++) {
+            massif[i] = -massif[i];
+        }
+    }
+
+    public int[] getMassif(int[] massif){
+        return massif;
+    }
+
     public void paint(int[] x) {
         for (int i = 0; i < x.length; i++) {
             System.out.println(x[i]);

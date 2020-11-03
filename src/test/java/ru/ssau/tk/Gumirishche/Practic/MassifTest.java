@@ -64,4 +64,13 @@ public class MassifTest {
         assertEquals(massif01.symmetricMassif(5), new int[]{1, 2, 3, 2, 1});
         assertEquals(massif01.symmetricMassif(6), new int[]{1, 2, 3, 3, 2, 1});
     }
+
+    @Test
+    public void testOppositeMassif() {
+        int[] a = new int[]{1, 2, 3, 4, 5};
+        massif01.oppositeMassif(a);
+        assertEquals(massif01.getMassif(a), new int[]{-1, -2, -3, -4, -5});
+        massif01.oppositeMassif(a);
+        assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5});
+    }
 }
