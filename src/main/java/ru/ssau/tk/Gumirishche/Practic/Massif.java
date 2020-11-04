@@ -129,13 +129,23 @@ public class Massif {
         return massif;
     }
 
+    public boolean inTheMassif(int[] massif, int x) {
+        boolean result = false;
+        for (int i = 0; i < massif.length; i++) {
+            if (x == massif[i]) {
+                result = true;
+            }
+        }
+        return result;
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];
         }
     }
 
-    public int[] getMassif(int[] massif){
+    public int[] getMassif(int[] massif) {
         return massif;
     }
 

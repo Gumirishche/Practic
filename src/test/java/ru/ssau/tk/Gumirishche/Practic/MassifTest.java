@@ -73,4 +73,12 @@ public class MassifTest {
         massif01.oppositeMassif(a);
         assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5});
     }
+
+    @Test
+    public void testInTheMassif() {
+        int[] mass = new int[]{1, 2, 3, 4, 5, 6};
+        assertTrue(massif01.inTheMassif(mass, 3));
+        assertFalse(massif01.inTheMassif(mass, 0));
+        assertFalse(massif01.inTheMassif(mass, -3));
+    }
 }
