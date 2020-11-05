@@ -139,6 +139,17 @@ public class Massif {
         return result;
     }
 
+    public boolean nullMassif(Integer[] integers) {
+        boolean result = false;
+        for (int i = 0; i < integers.length; i++) {
+            if (integers[i] == null) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];

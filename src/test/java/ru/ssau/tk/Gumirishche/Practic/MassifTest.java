@@ -81,4 +81,12 @@ public class MassifTest {
         assertFalse(massif01.inTheMassif(mass, 0));
         assertFalse(massif01.inTheMassif(mass, -3));
     }
+
+    @Test
+    public void testNullMassif() {
+        Integer[] mass1 = new Integer[]{1, 2, 3, null};
+        Integer[] mass2 = new Integer[]{1, 2, 3};
+        assertTrue(massif01.nullMassif(mass1));
+        assertFalse(massif01.nullMassif(mass2));
+    }
 }
