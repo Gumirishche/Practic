@@ -89,4 +89,10 @@ public class MassifTest {
         assertTrue(massif01.nullMassif(mass1));
         assertFalse(massif01.nullMassif(mass2));
     }
+
+    @Test
+    public void testQuantityEvenNumbersMassif() {
+        assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 5, 0.0001);
+        assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 4, 6, 8}), 4, 0.0001);
+    }
 }

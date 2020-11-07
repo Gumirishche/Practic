@@ -150,6 +150,16 @@ public class Massif {
         return result;
     }
 
+    public int quantityEvenNumbersMassif(int[] massif) {
+        int quantity = 0;
+        for (int i = 0; i < massif.length; i++) {
+            if (massif[i] % 2 == 0) {
+                quantity++;
+            }
+        }
+        return quantity;
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];
