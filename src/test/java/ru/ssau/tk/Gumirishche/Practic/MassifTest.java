@@ -91,6 +91,13 @@ public class MassifTest {
     }
 
     @Test
+    public void testMaxNumberMassif() {
+        assertEquals(massif01.maxNumberMassif(new int[]{1, 2, 3, 4, 5, 6, 7}), 7);
+        assertNull(massif01.maxNumberMassif(new int[]{}));
+        assertEquals(massif01.maxNumberMassif(new int[]{9, 5, 3, 7, 6, 2, 65, 4, 3, 3, 5, 6, 4, 5, 78, 6, 6, 6, 3, 6, 74, 45, 7}), 78);
+    }
+
+    @Test
     public void testQuantityEvenNumbersMassif() {
         assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 5, 0.0001);
         assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 4, 6, 8}), 4, 0.0001);

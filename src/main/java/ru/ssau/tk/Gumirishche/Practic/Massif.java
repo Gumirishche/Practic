@@ -160,6 +160,20 @@ public class Massif {
         return quantity;
     }
 
+    public Object maxNumberMassif(int[] massif) {
+        if (massif.length == 0) {
+            return null;
+        } else {
+            int max = massif[0];
+            for (int i = 1; i < massif.length; i++) {
+                if (max < massif[i]) {
+                    max = massif[i];
+                }
+            }
+            return max;
+        }
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];
