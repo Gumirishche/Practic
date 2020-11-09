@@ -174,6 +174,14 @@ public class Massif {
         }
     }
 
+    public int evenIndexSum(int[] massif) {
+        int sum = 0;
+        for (int i = 0; i < massif.length; i = i + 2) {
+            sum = sum + massif[i];
+        }
+        return sum;
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];
