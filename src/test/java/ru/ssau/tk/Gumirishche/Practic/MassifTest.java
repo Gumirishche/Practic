@@ -109,4 +109,10 @@ public class MassifTest {
         assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 5, 0.0001);
         assertEquals(massif01.quantityEvenNumbersMassif(new int[]{1, 2, 4, 6, 8}), 4, 0.0001);
     }
+
+    @Test
+    public void testMassifFirstOrLast() {
+        assertTrue(massif01.massifFirstOrLast(new int[]{1, 2, 4, 3, 6, 7, 8, 9}));
+        assertFalse(massif01.massifFirstOrLast(new int[]{8, 6, 3, 8, 5, 43, 7, 5, 3, 1}));
+    }
 }
