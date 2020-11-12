@@ -115,4 +115,10 @@ public class MassifTest {
         assertTrue(massif01.massifFirstOrLast(new int[]{1, 2, 4, 3, 6, 7, 8, 9}));
         assertFalse(massif01.massifFirstOrLast(new int[]{8, 6, 3, 8, 5, 43, 7, 5, 3, 1}));
     }
+
+    @Test
+    public void testMassif21() {
+        assertEquals(massif01.massif21(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 1}), 1);
+        assertEquals(massif01.massif21(new int[]{1, 1, 1, 2, 2, 2, 2, -3, -3, -3, -3, -3}), -3);
+    }
 }

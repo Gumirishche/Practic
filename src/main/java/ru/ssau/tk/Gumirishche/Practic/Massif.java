@@ -182,7 +182,7 @@ public class Massif {
             if (massif[i] % massif[0] == 0) {
                 first++;
             }
-            if (massif[i] % massif[massif.length-1] == 0) {
+            if (massif[i] % massif[massif.length - 1] == 0) {
                 last++;
             }
         }
@@ -191,6 +191,24 @@ public class Massif {
         } else {
             return false;
         }
+    }
+
+    public int massif21(int[] massif) {
+        int y = 0;
+        int value = 0;
+        for (int i = 0; i < massif.length - 1; i++) {
+            int x = 1;
+            for (int j = i + 1; j < massif.length; j++) {
+                if (massif[i] == massif[j]) {
+                    x++;
+                }
+            }
+            if (y < x) {
+                y = x;
+                value = massif[i];
+            }
+        }
+        return value;
     }
 
     public int evenIndexSum(int[] massif) {
