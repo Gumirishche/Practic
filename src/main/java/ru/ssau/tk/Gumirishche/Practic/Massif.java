@@ -211,6 +211,16 @@ public class Massif {
         return value;
     }
 
+    public int indexOfAnEqualArrayElement(int[] massif, int element) {
+        int i;
+        for (i = 0; i < massif.length; i++) {
+            if (massif[i] == element) {
+                break;
+            }
+        }
+        return i;
+    }
+
     public int evenIndexSum(int[] massif) {
         int sum = 0;
         for (int i = 0; i < massif.length; i = i + 2) {

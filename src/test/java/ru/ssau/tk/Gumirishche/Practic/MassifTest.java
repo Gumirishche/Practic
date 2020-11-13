@@ -121,4 +121,10 @@ public class MassifTest {
         assertEquals(massif01.massif21(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 1}), 1);
         assertEquals(massif01.massif21(new int[]{1, 1, 1, 2, 2, 2, 2, -3, -3, -3, -3, -3}), -3);
     }
+
+    @Test
+    public void testIndexOfAnEqualArrayElement() {
+        assertEquals(massif01.indexOfAnEqualArrayElement(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 9), 8);
+        assertEquals(massif01.indexOfAnEqualArrayElement(new int[]{1, 6, 3, 5, 9, 5, 6, 4, -5, 2, 5}, -5), 8);
+    }
 }
