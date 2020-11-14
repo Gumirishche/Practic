@@ -221,6 +221,24 @@ public class Massif {
         return i;
     }
 
+    public void changeMaxAndMin(int[] massif) {
+        int max = massif[0], min = massif[0];
+        int indexMax = 0, indexMin = 0;
+        for (int i = 1; i < massif.length; i++) {
+            if (max < massif[i]) {
+                max = massif[i];
+                indexMax = i;
+            }
+            if (min > massif[i]) {
+                min = massif[i];
+                indexMin = i;
+            }
+        }
+        int x = massif[indexMax];
+        massif[indexMax] = massif[indexMin];
+        massif[indexMin] = x;
+    }
+
     public int evenIndexSum(int[] massif) {
         int sum = 0;
         for (int i = 0; i < massif.length; i = i + 2) {

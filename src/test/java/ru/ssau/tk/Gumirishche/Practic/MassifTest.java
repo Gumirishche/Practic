@@ -127,4 +127,14 @@ public class MassifTest {
         assertEquals(massif01.indexOfAnEqualArrayElement(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 9), 8);
         assertEquals(massif01.indexOfAnEqualArrayElement(new int[]{1, 6, 3, 5, 9, 5, 6, 4, -5, 2, 5}, -5), 8);
     }
+
+    @Test
+    public void testChangeMaxAndMin() {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6};
+        massif01.changeMaxAndMin(a);
+        assertEquals(massif01.getMassif(a), new int[]{6, 2, 3, 4, 5, 1});
+        int[] b = new int[]{1, 2, -4, 4, 10, 6};
+        massif01.changeMaxAndMin(b);
+        assertEquals(massif01.getMassif(b), new int[]{1, 2, 10, 4, -4, 6});
+    }
 }
