@@ -239,6 +239,12 @@ public class Massif {
         massif[indexMin] = x;
     }
 
+    public void negativeMassif(int[] massif) {
+        for (int i = 0; i < massif.length; i++) {
+            massif[i] = (~massif[i]) + 1;
+        }
+    }
+
     public int evenIndexSum(int[] massif) {
         int sum = 0;
         for (int i = 0; i < massif.length; i = i + 2) {

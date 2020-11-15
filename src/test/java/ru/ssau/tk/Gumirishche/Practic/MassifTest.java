@@ -137,4 +137,16 @@ public class MassifTest {
         massif01.changeMaxAndMin(b);
         assertEquals(massif01.getMassif(b), new int[]{1, 2, 10, 4, -4, 6});
     }
+
+    @Test
+    public void testNegativeMassif() {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        massif01.negativeMassif(a);
+        assertEquals(massif01.getMassif(a), new int[]{-1, -2, -3, -4, -5, -6, -7, -8});
+        massif01.negativeMassif(a);
+        assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        massif01.negativeMassif(a);
+        massif01.negativeMassif(a);
+        assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+    }
 }
