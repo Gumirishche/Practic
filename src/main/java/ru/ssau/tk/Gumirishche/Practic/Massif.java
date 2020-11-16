@@ -245,6 +245,14 @@ public class Massif {
         }
     }
 
+    public int[] newNegativeMassif(int[] massif) {
+        int[] newMassif = new int[massif.length];
+        for (int i = 0; i < massif.length; i++) {
+            newMassif[i] = (~massif[i]) + 1;
+        }
+        return newMassif;
+    }
+
     public int evenIndexSum(int[] massif) {
         int sum = 0;
         for (int i = 0; i < massif.length; i = i + 2) {

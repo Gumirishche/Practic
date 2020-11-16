@@ -149,4 +149,14 @@ public class MassifTest {
         massif01.negativeMassif(a);
         assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
     }
+
+    @Test
+    public void testNewNegativeMassif() {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        assertEquals(massif01.newNegativeMassif(a), new int[]{-1, -2, -3, -4, -5, -6, -7, -8});
+        assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        assertEquals(massif01.newNegativeMassif(a), new int[]{-1, -2, -3, -4, -5, -6, -7, -8});
+        assertEquals(massif01.newNegativeMassif(a), new int[]{-1, -2, -3, -4, -5, -6, -7, -8});
+        assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+    }
 }
