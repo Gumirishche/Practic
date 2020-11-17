@@ -261,6 +261,29 @@ public class Massif {
         return sum;
     }
 
+    public int[] doubleSum(int[] massif) {
+        int j;
+        if (massif.length % 2 == 0) {
+            int[] newMassif = new int[massif.length / 2];
+            for (int i = 0; i < massif.length / 2; i++) {
+                j = i * 2;
+                newMassif[i] = massif[j] + massif[j + 1];
+            }
+            return newMassif;
+        } else {
+            int[] newMassif = new int[(massif.length / 2) + 1];
+            for (int h = 0; h < (massif.length / 2) + 1; h++) {
+                j = h * 2;
+                if (j == massif.length - 1) {
+                    newMassif[h] = massif[j];
+                } else {
+                    newMassif[h] = massif[j] + massif[j + 1];
+                }
+            }
+            return newMassif;
+        }
+    }
+
     public void oppositeMassif(int[] massif) {
         for (int i = 0; i < massif.length; i++) {
             massif[i] = -massif[i];

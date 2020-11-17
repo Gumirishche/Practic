@@ -159,4 +159,11 @@ public class MassifTest {
         assertEquals(massif01.newNegativeMassif(a), new int[]{-1, -2, -3, -4, -5, -6, -7, -8});
         assertEquals(massif01.getMassif(a), new int[]{1, 2, 3, 4, 5, 6, 7, 8});
     }
+
+    @Test
+    public void testDoubleSum() {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        assertEquals(massif01.doubleSum(a), new int[]{3, 7, 11, 15});
+        assertEquals(massif01.doubleSum(new int[]{1, 2, 3, 4, 5, 6, 7}), new int[]{3, 7, 11, 7});
+    }
 }
