@@ -166,4 +166,10 @@ public class MassifTest {
         assertEquals(massif01.doubleSum(a), new int[]{3, 7, 11, 15});
         assertEquals(massif01.doubleSum(new int[]{1, 2, 3, 4, 5, 6, 7}), new int[]{3, 7, 11, 7});
     }
+
+    @Test
+    public void testBooleansEvenElements() {
+        assertEquals(massif01.booleansEvenElements(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}), new boolean[]{false, true, false, true, false, true, false, true, false});
+        assertEquals(massif01.booleansEvenElements(new int[]{1, 6, 3, 8, 5, 6, 0, 4, 2, 2}), new boolean[]{false, true, false, true, false, true, true, true, true, true});
+    }
 }

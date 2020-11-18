@@ -290,6 +290,18 @@ public class Massif {
         }
     }
 
+    public boolean[] booleansEvenElements(int[] massif) {
+        boolean[] booleans = new boolean[massif.length];
+        for (int i = 0; i < massif.length; i++) {
+            if (massif[i] % 2 == 0) {
+                booleans[i] = true;
+            } else {
+                booleans[i] = false;
+            }
+        }
+        return booleans;
+    }
+
     public int[] getMassif(int[] massif) {
         return massif;
     }
