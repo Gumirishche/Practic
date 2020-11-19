@@ -302,6 +302,13 @@ public class Massif {
         return booleans;
     }
 
+    public String byteMassif(long x){
+        String bytes= Long.toBinaryString(x);
+        int[] bytesLeftInt=new int[32];
+        int[] bytesRightInt=new int[32];
+        return bytes;
+    }
+
     public int[] getMassif(int[] massif) {
         return massif;
     }
@@ -329,7 +336,8 @@ public class Massif {
     public static void main(String[] args) {
         Massif x = new Massif();
         /*x.paint(x.arithmeticMassif(5, 1, 6));
-        x.paint(3,1,0.1);*/
-        x.paint(x.simpleMassif(24));
+        x.paint(3,1,0.1);
+        x.paint(x.simpleMassif(24));*/
+        System.out.println(x.byteMassif(-222222222));
     }
 }
