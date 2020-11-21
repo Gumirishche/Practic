@@ -302,11 +302,27 @@ public class Massif {
         return booleans;
     }
 
-    public String byteMassif(long x){
-        String bytes= Long.toBinaryString(x);
-        int[] bytesLeftInt=new int[32];
-        int[] bytesRightInt=new int[32];
+    public String byteMassif(long x) {
+        String bytes = Long.toBinaryString(x);
+        int[] bytesLeftInt = new int[32];
+        int[] bytesRightInt = new int[32];
         return bytes;
+    }
+
+    public int[] naturalMassif(int size, int index) {
+        int[] massif = new int[size];
+        int j = 0;
+        int h = 1;
+        for (int i = 0; i < size; i++) {
+            if (index + j <= size) {
+                massif[i] = index + j;
+            } else {
+                massif[i] = h;
+                h++;
+            }
+            j++;
+        }
+        return massif;
     }
 
     public int[] getMassif(int[] massif) {

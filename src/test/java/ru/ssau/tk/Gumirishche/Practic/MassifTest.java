@@ -172,4 +172,10 @@ public class MassifTest {
         assertEquals(massif01.booleansEvenElements(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}), new boolean[]{false, true, false, true, false, true, false, true, false});
         assertEquals(massif01.booleansEvenElements(new int[]{1, 6, 3, 8, 5, 6, 0, 4, 2, 2}), new boolean[]{false, true, false, true, false, true, true, true, true, true});
     }
+
+    @Test
+    public void testNaturalMassif() {
+        assertEquals(massif01.naturalMassif(5, 3), new int[]{3, 4, 5, 1, 2});
+        assertEquals(massif01.naturalMassif(6, 6), new int[]{6, 1, 2, 3, 4, 5});
+    }
 }
