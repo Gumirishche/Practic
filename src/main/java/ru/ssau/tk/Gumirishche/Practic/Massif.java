@@ -335,6 +335,21 @@ public class Massif {
         }
     }
 
+    public int[][] doubleMassif(int firstSize) {
+        int[][] massif = new int[firstSize][];
+        int size = firstSize;
+        int element = 1;
+        for (int i = 0; i < firstSize; i++) {
+            int[] iMassif = new int[size];
+            for (int h = 0; h < size; h++) {
+                iMassif[h] = element;
+                element++;
+            }
+            massif[i] = iMassif;
+        }
+        return massif;
+    }
+
     public void paint(int size, int first, double division) {
         long[] massif = new long[size];
         double massifInteger;

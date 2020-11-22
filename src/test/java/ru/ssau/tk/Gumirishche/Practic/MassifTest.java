@@ -178,4 +178,9 @@ public class MassifTest {
         assertEquals(massif01.naturalMassif(5, 3), new int[]{3, 4, 5, 1, 2});
         assertEquals(massif01.naturalMassif(6, 6), new int[]{6, 1, 2, 3, 4, 5});
     }
+
+    @Test
+    public void testDoubleMassif(){
+        assertEquals(massif01.doubleMassif(3),new int[][]{{1,2,3},{4,5},{6}});
+    }
 }
