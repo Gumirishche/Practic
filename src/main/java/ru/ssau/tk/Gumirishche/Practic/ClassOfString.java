@@ -7,8 +7,17 @@ public class ClassOfString {
         }
     }
 
+    public void getBytesOfString(String string){
+       byte[] bytes= string.getBytes();
+       int i=0;
+        for (byte byt :bytes) {
+            System.out.println(bytes[i++]);
+        }
+    }
+
     public static void main(String[] args) {
         ClassOfString string=new ClassOfString();
-        string.StringCharOut("Hello world");
+        string.getBytesOfString("Hello");
+        string.getBytesOfString("Привет");
     }
 }
