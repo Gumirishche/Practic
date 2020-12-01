@@ -306,6 +306,9 @@ public class Massif {
         String bytes = Long.toBinaryString(x);
         int[] bytesLeftInt = new int[32];
         int[] bytesRightInt = new int[32];
+        char[] chars=bytes.toCharArray();
+        /*bytesRightInt=Integer.parseInt(bytes.substring(bytes.length()-32,bytes.length()));*/
+        int[] massif=new int[2];
         return bytes;
     }
 
@@ -369,6 +372,6 @@ public class Massif {
         /*x.paint(x.arithmeticMassif(5, 1, 6));
         x.paint(3,1,0.1);
         x.paint(x.simpleMassif(24));*/
-        System.out.println(x.byteMassif(-222222222));
+        System.out.println(x.byteMassif(5));
     }
 }

@@ -15,9 +15,15 @@ public class ClassOfString {
         }
     }
 
+    public void equalsString(){
+        String string="Hello";
+        String string2=new String(string);
+        System.out.println(string==string2);
+        System.out.println(string.equals(string2));
+    }
+
     public static void main(String[] args) {
         ClassOfString string=new ClassOfString();
-        string.getBytesOfString("Hello");
-        string.getBytesOfString("Привет");
+        string.equalsString();
     }
 }
