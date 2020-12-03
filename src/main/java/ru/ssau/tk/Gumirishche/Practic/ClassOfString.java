@@ -22,6 +22,14 @@ public class ClassOfString {
         System.out.println(string.equals(string2));
     }
 
+    public boolean registerMassif(String str1, String str2) {
+        if (str1.equals(str2) == false && str1.equalsIgnoreCase(str2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public boolean palindrome(String string) {
         String reverseString = "";
         for (int i = string.length() - 1; i >= 0; i--) {
