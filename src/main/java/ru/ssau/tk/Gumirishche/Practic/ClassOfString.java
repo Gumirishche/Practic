@@ -30,6 +30,18 @@ public class ClassOfString {
         }
     }
 
+    public void test() {
+        int i = 0;
+        System.out.println("\t№" + ++i);
+        System.out.println("\b№" + ++i);
+        System.out.println("\n№" + ++i);
+        System.out.println("\r№" + ++i);
+        System.out.println("\'№" + ++i);
+        System.out.println("\"№" + ++i);
+        System.out.println("\\№" + ++i);
+        System.out.println("/'№" + ++i);
+    }
+
     public boolean palindrome(String string) {
         String reverseString = "";
         for (int i = string.length() - 1; i >= 0; i--) {
@@ -40,6 +52,6 @@ public class ClassOfString {
 
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        System.out.println(string.palindrome("supus"));
+        string.test();
     }
 }
