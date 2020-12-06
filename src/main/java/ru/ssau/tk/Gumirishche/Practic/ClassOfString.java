@@ -42,6 +42,10 @@ public class ClassOfString {
         System.out.println("/'№" + ++i);
     }
 
+    public int indexRepetition(String str1, String str2) {
+        return str1.indexOf(str2);
+    }
+
     public boolean palindrome(String string) {
         String reverseString = "";
         for (int i = string.length() - 1; i >= 0; i--) {
