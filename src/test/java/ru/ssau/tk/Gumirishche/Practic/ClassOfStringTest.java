@@ -27,4 +27,11 @@ public class ClassOfStringTest {
         assertEquals(str.indexRepetition("asgsg4ew asfhg", "as"), 0);
         assertEquals(str.indexRepetition("Hello", "World"), -1);
     }
+
+    @Test
+    public void testRepetitionFrom() {
+        assertEquals(str.indexRepetitionFrom("Hello world", "or"), 7);
+        assertEquals(str.indexRepetitionFrom("asgsg4ew asfhg", "as"), 9);
+        assertEquals(str.indexRepetitionFrom("Hello", "World"), -1);
+    }
 }

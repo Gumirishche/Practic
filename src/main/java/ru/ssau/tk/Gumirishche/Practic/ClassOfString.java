@@ -46,6 +46,10 @@ public class ClassOfString {
         return str1.indexOf(str2);
     }
 
+    public int indexRepetitionFrom(String str1, String str2) {
+        return str1.indexOf(str2, (str1.length() - 1) / 2);
+    }
+
     public boolean palindrome(String string) {
         String reverseString = "";
         for (int i = string.length() - 1; i >= 0; i--) {
