@@ -34,4 +34,11 @@ public class ClassOfStringTest {
         assertEquals(str.indexRepetitionFrom("asgsg4ew asfhg", "as"), 9);
         assertEquals(str.indexRepetitionFrom("Hello", "World"), -1);
     }
+
+    @Test
+    public void testRepetitionLast() {
+        assertEquals(str.indexRepetitionLast("Hello world", "el"), 1);
+        assertEquals(str.indexRepetitionLast("asgsg4ew asfhg", "as"), 0);
+        assertEquals(str.indexRepetitionLast("Hello", "World"), -1);
+    }
 }

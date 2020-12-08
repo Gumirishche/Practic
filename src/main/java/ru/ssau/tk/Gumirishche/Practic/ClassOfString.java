@@ -58,6 +58,10 @@ public class ClassOfString {
         return string.equals(reverseString);
     }
 
+    public int indexRepetitionLast(String str1, String str2) {
+        return str1.lastIndexOf(str2, (str1.length() - 1) / 2);
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
         string.test();
