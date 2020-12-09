@@ -58,6 +58,16 @@ public class ClassOfString {
         return string.equals(reverseString);
     }
 
+    public int prefixAndPostfix(String[] strings, String prefix, String postfix) {
+        int quantity = 0;
+        for (int i = 0; i < strings.length; i++) {
+            if (strings[i].startsWith(prefix) && strings[i].endsWith(postfix)) {
+                quantity++;
+            }
+        }
+        return quantity;
+    }
+
     public int indexRepetitionLast(String str1, String str2) {
         return str1.lastIndexOf(str2, (str1.length() - 1) / 2);
     }

@@ -29,6 +29,12 @@ public class ClassOfStringTest {
     }
 
     @Test
+    public void testPreAndPost() {
+        assertEquals(str.prefixAndPostfix(new String[]{"hello world", "hello", "world"}, "hello", "world"), 1);
+        assertEquals(str.prefixAndPostfix(new String[]{"asfs asga asfas", "asff fdhd asfas", "asfs gfnasfas"}, "asfs", "asfas"), 2);
+    }
+
+    @Test
     public void testRepetitionFrom() {
         assertEquals(str.indexRepetitionFrom("Hello world", "or"), 7);
         assertEquals(str.indexRepetitionFrom("asgsg4ew asfhg", "as"), 9);
