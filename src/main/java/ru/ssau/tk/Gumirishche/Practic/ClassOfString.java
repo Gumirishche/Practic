@@ -71,8 +71,7 @@ public class ClassOfString {
     public int prefixAndPostfixWithTrim(String[] strings, String prefix, String postfix) {
         int quantity = 0;
         for (int i = 0; i < strings.length; i++) {
-            strings[i].trim();
-            if (strings[i].startsWith(prefix) && strings[i].endsWith(postfix)) {
+            if (strings[i].trim().startsWith(prefix) && strings[i].trim().endsWith(postfix)) {
                 quantity++;
             }
         }

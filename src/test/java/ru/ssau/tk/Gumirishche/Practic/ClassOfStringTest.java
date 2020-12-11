@@ -36,8 +36,8 @@ public class ClassOfStringTest {
 
     @Test
     public void testPreAndPostWithTrim() {
-        assertEquals(str.prefixAndPostfix(new String[]{"   hello world    ", "hello", "world"}, "hello", "world"), 1);
-        assertEquals(str.prefixAndPostfix(new String[]{"    asfs asga asfas   ", "asff fdhd asfas", "asfs gfnasfas"}, "asfs", "asfas"), 2);
+        assertEquals(str.prefixAndPostfixWithTrim(new String[]{"   hello world    ", "hello", "world"}, "hello", "world"), 1);
+        assertEquals(str.prefixAndPostfixWithTrim(new String[]{"    asfs asga asfas   ", "asff fdhd asfas", "asfs gfnasfas"}, "asfs", "asfas"), 2);
     }
 
     @Test
