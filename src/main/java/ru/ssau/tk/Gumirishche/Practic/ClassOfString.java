@@ -82,12 +82,12 @@ public class ClassOfString {
         return str1.lastIndexOf(str2, (str1.length() - 1) / 2);
     }
 
-    public String compositeString(String str1, String str2, String str3){
+    public String compositeString(String str1, String str2, String str3) {
         int i;
-        for (i=0;i<100;i++){
-            if(str1.contains(str2)){
-            str1=str1.replaceAll(str2,str3);}
-            else {
+        for (i = 0; i < 100; i++) {
+            if (str1.contains(str2)) {
+                str1 = str1.replaceAll(str2, str3);
+            } else {
                 break;
             }
             i++;
@@ -97,6 +97,6 @@ public class ClassOfString {
 
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        System.out.println(string.compositeString("ороророро","opo","po"));
+        System.out.println(string.compositeString("opopopopo", "opo", "po"));
     }
 }

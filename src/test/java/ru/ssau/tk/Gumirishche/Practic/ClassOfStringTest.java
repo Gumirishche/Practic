@@ -53,4 +53,10 @@ public class ClassOfStringTest {
         assertEquals(str.indexRepetitionLast("asgsg4ew asfhg", "as"), 0);
         assertEquals(str.indexRepetitionLast("Hello", "World"), -1);
     }
+
+    @Test
+    public void testCompositeString() {
+        assertEquals(str.compositeString("opopopopo", "opo", "po"), "popppo");
+        assertEquals(str.compositeString("hehehihehi", "hi", "he"), "hehehehehe");
+    }
 }
