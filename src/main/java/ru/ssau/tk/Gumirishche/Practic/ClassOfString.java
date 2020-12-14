@@ -95,6 +95,20 @@ public class ClassOfString {
         return str1;
     }
 
+    public String substringOfOrigString(String str, int from, int to) {
+        if (from < 0) {
+            from = 0;
+        }
+        if (to > str.length()) {
+            to = str.length();
+        }
+        if (from == to) {
+            return str = "";
+        } else {
+            return str.substring(from, to);
+        }
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
         System.out.println(string.compositeString("opopopopo", "opo", "po"));

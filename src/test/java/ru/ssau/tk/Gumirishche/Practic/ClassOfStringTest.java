@@ -59,4 +59,11 @@ public class ClassOfStringTest {
         assertEquals(str.compositeString("opopopopo", "opo", "po"), "popppo");
         assertEquals(str.compositeString("hehehihehi", "hi", "he"), "hehehehehe");
     }
+
+    @Test
+    public void testSubstring() {
+        assertEquals(str.substringOfOrigString("hello world", -1, 5), "hello");
+        assertEquals(str.substringOfOrigString("hello world", 3, 100), "lo world");
+        assertEquals(str.substringOfOrigString("fgjfgjfgjdfgjdjgdhgf", 1, 1), "");
+    }
 }
