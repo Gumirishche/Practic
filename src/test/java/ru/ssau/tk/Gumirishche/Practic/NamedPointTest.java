@@ -39,4 +39,10 @@ public class NamedPointTest {
         assertEquals(point3.getName(), "Absent");
     }
 
+    @Test
+    public void testToString() {
+        assertEquals(point2.toString(), "[1.0,2.0,3.0]");
+        assertEquals(point3.toString(), "A [1.0,2.0,3.0]");
+    }
+
 }
