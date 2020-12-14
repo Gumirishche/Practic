@@ -67,6 +67,11 @@ public class Person {
         this.passportId = passportId;
     }
 
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
+
     public static void main(String[] args) {
         Person person1 = new Person();
         person1.setFirstName("Gumir");
@@ -77,10 +82,11 @@ public class Person {
         person2.setLastName("Diu");
         person2.setPassportId(1254135);
 
-        Person person3 = new Person(124315);
+        System.out.println(person1.toString());
+        /*Person person3 = new Person(124315);
         Person person4 = new Person("Gumir", "Ishanov");
         Person person5 = new Person("Gumir", "Ishanov", 12315452);
-        Person person6 = new Person();
+        Person person6 = new Person();*/
     }
 }
 

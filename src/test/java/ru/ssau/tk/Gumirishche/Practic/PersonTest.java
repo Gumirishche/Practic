@@ -45,6 +45,13 @@ public class PersonTest {
     }
 
     @Test
+    public void testToString() {
+        Person person = new Person("Uri", "West");
+        assertEquals(person2.toString(), "John Black");
+        assertEquals(person.toString(), "Uri West");
+    }
+
+    @Test
     public void testPersonConstr() {
         assertEquals(person2.getFirstName(), "John");
         assertEquals(person2.getLastName(), "Black");
