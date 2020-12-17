@@ -14,4 +14,18 @@ public class Matrices {
             return matrix;
         }
     }
+
+    static Matrix multiply(Matrix x, Matrix y) {
+        if (x.length != y.width) {
+            return null;
+        } else {
+            Matrix matrix = new Matrix(x.length, x.width);
+            for (int i = 0; i < x.length; i++) {
+                for (int j = 0; j < x.width; j++) {
+
+                }
+            }
+            return matrix;
+        }
+    }
 }
