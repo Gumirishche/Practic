@@ -109,8 +109,14 @@ public class ClassOfString {
         }
     }
 
+    public void implicitToString(Object o) {
+        System.out.println("Описание объекта: " + o);
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        System.out.println(string.compositeString("opopopopo", "opo", "po"));
+        string.implicitToString(new Point(12, 12, 12));
+        string.implicitToString(new Person("Gumir", "Ishanov", 1234, Gender.MALE));
+        string.implicitToString(new NamedPoint(12, 12, 12, "Point"));
     }
 }
