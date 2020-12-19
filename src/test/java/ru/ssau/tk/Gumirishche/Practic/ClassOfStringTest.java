@@ -66,4 +66,10 @@ public class ClassOfStringTest {
         assertEquals(str.substringOfOrigString("hello world", 3, 100), "lo world");
         assertEquals(str.substringOfOrigString("fgjfgjfgjdfgjdjgdhgf", 1, 1), "");
     }
+
+    @Test
+    public void testSplitString() {
+        assertEquals(str.splitString("hello world"), new String[]{"Hello", "world"});
+        assertEquals(str.splitString("my name  is Gumir"), new String[]{"My", "name", "", "is", "Gumir"});
+    }
 }

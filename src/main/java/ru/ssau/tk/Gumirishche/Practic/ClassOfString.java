@@ -113,10 +113,21 @@ public class ClassOfString {
         System.out.println("Описание объекта: " + o);
     }
 
+    public String[] splitString(String str) {
+        String[] strings = str.split(" ");
+        strings[0] = strings[0].substring(0, 1).toUpperCase() + strings[0].substring(1);
+        int i = 0;
+        for (String s : strings) {
+            System.out.println(strings[i++]);
+        }
+        return strings;
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        string.implicitToString(new Point(12, 12, 12));
+        string.splitString("hello world! I am is Gumir");
+        /*string.implicitToString(new Point(12, 12, 12));
         string.implicitToString(new Person("Gumir", "Ishanov", 1234, Gender.MALE));
-        string.implicitToString(new NamedPoint(12, 12, 12, "Point"));
+        string.implicitToString(new NamedPoint(12, 12, 12, "Point"));*/
     }
 }
