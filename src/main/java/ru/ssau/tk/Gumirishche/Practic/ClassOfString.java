@@ -123,6 +123,10 @@ public class ClassOfString {
         return strings;
     }
 
+    public String joinString(String[] strings) {
+        return String.join(", ", strings);
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
         string.splitString("hello world! I am is Gumir");

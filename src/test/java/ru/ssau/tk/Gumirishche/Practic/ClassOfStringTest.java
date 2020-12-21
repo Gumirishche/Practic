@@ -72,4 +72,10 @@ public class ClassOfStringTest {
         assertEquals(str.splitString("hello world"), new String[]{"Hello", "world"});
         assertEquals(str.splitString("my name  is Gumir"), new String[]{"My", "name", "", "is", "Gumir"});
     }
+
+    @Test
+    public void testJoinString() {
+        assertEquals(str.joinString(new String[]{"Hello", "World"}), "Hello, World");
+        assertEquals(str.joinString(new String[]{"one", "two", "three"}), "one, two, three");
+    }
 }
