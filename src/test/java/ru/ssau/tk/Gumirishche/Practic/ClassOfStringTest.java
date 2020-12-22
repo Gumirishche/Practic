@@ -78,4 +78,10 @@ public class ClassOfStringTest {
         assertEquals(str.joinString(new String[]{"Hello", "World"}), "Hello, World");
         assertEquals(str.joinString(new String[]{"one", "two", "three"}), "one, two, three");
     }
+
+    @Test
+    public void testStringBuilder() {
+        assertEquals(str.stringBuilder("Hello world"), "01l8o6 4l2e0");
+        assertEquals(str.stringBuilder("sfdhdafhashf"), "f01s8h6a4h2f0");
+    }
 }

@@ -127,9 +127,19 @@ public class ClassOfString {
         return String.join(", ", strings);
     }
 
+    public String stringBuilder(String str) {
+        StringBuilder stringBuilder = new StringBuilder(str);
+        for (int i = 0; i < str.length(); i++) {
+            if (i % 2 == 0) {
+                stringBuilder.replace(i, i + 1, "" + i);
+            }
+        }
+        stringBuilder.reverse();
+        return stringBuilder.toString();
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        string.splitString("hello world! I am is Gumir");
         /*string.implicitToString(new Point(12, 12, 12));
         string.implicitToString(new Person("Gumir", "Ishanov", 1234, Gender.MALE));
         string.implicitToString(new NamedPoint(12, 12, 12, "Point"));*/
