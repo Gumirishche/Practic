@@ -138,8 +138,17 @@ public class ClassOfString {
         return stringBuilder.toString();
     }
 
+    public String listingString(int number) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < number; i++) {
+            stringBuilder.append(i);
+        }
+        return stringBuilder.toString();
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
+        System.out.println(string.listingString(1000));
         /*string.implicitToString(new Point(12, 12, 12));
         string.implicitToString(new Person("Gumir", "Ishanov", 1234, Gender.MALE));
         string.implicitToString(new NamedPoint(12, 12, 12, "Point"));*/

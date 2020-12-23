@@ -84,4 +84,10 @@ public class ClassOfStringTest {
         assertEquals(str.stringBuilder("Hello world"), "01l8o6 4l2e0");
         assertEquals(str.stringBuilder("sfdhdafhashf"), "f01s8h6a4h2f0");
     }
+
+    @Test
+    public void testListingString() {
+        assertEquals(str.listingString(6), "012345");
+        assertEquals(str.listingString(15), "01234567891011121314");
+    }
 }
