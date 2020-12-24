@@ -1,5 +1,8 @@
 package ru.ssau.tk.Gumirishche.Practic;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
 public class ClassOfString {
     public void StringCharOut(String string) {
         for (int i = 0; i < string.length(); i++) {
@@ -146,10 +149,16 @@ public class ClassOfString {
         return stringBuilder.toString();
     }
 
+    public String charsetString(String str, Charset charset1, Charset charset2){
+        return new String(str.getBytes(charset1),charset2);
+    }
+
     public static void main(String[] args) {
         ClassOfString string = new ClassOfString();
-        System.out.println(string.listingString(1000));
-        /*string.implicitToString(new Point(12, 12, 12));
+        System.out.println(java.nio.charset.Charset.defaultCharset());
+        System.out.println(string.charsetString("Hello",Charset.defaultCharset(),Charset.defaultCharset()));
+        /*System.out.println(string.listingString(1000));
+        string.implicitToString(new Point(12, 12, 12));
         string.implicitToString(new Person("Gumir", "Ishanov", 1234, Gender.MALE));
         string.implicitToString(new NamedPoint(12, 12, 12, "Point"));*/
     }
