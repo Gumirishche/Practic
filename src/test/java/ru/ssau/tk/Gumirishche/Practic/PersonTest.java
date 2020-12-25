@@ -1,5 +1,6 @@
 package ru.ssau.tk.Gumirishche.Practic;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -49,6 +50,17 @@ public class PersonTest {
         Person person = new Person("Uri", "West");
         assertEquals(person2.toString(), "John Black");
         assertEquals(person.toString(), "Uri West");
+    }
+
+    @Test
+    public void testException() {
+        Person person = new Person("Uri", "West");
+        assertEquals(person2.exceptionPerson(person2), "John Black");
+        assertEquals(person.exceptionPerson(person), "Uri West");
+
+        Assert.assertThrows(NullPointerException.class, () -> {
+            person.exceptionPerson(null);
+        });
     }
 
     @Test

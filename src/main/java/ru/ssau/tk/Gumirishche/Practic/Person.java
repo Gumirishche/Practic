@@ -72,6 +72,10 @@ public class Person {
         return firstName + " " + lastName;
     }
 
+    public String exceptionPerson(Person person) {
+        return person.toString();
+    }
+
     public static void main(String[] args) {
         Person person1 = new Person();
         person1.setFirstName("Gumir");
