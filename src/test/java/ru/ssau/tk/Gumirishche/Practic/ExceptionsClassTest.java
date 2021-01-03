@@ -28,4 +28,16 @@ public class ExceptionsClassTest {
             exceptionsClass.StringsParts(new String[]{"hey", "hay"}, 1, 3);
         });
     }
+
+    @Test
+    public void testDivisionString() {
+        assertEquals(exceptionsClass.divisionString("25", "5"), 5);
+
+        assertThrows(NumberFormatException.class, () -> {
+            exceptionsClass.divisionString("53", "");
+        });
+        assertThrows(NumberFormatException.class, () -> {
+            exceptionsClass.divisionString("ghkg", "5");
+        });
+    }
 }
