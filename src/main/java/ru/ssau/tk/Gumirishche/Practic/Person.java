@@ -1,6 +1,8 @@
 package ru.ssau.tk.Gumirishche.Practic;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private String firstName;
     private String lastName;
     private int passportId;
@@ -74,23 +76,6 @@ public class Person {
 
     public String exceptionPerson(Person person) {
         return person.toString();
-    }
-
-    public static void main(String[] args) {
-        Person person1 = new Person();
-        person1.setFirstName("Gumir");
-        person1.setLastName("Ishanov");
-        person1.setPassportId(3463473);
-        Person person2 = new Person();
-        person2.setFirstName("Danil");
-        person2.setLastName("Diu");
-        person2.setPassportId(1254135);
-
-        System.out.println(person1.toString());
-        /*Person person3 = new Person(124315);
-        Person person4 = new Person("Gumir", "Ishanov");
-        Person person5 = new Person("Gumir", "Ishanov", 12315452);
-        Person person6 = new Person();*/
     }
 }
 
