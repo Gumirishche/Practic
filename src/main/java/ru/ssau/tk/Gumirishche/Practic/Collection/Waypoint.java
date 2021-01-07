@@ -1,4 +1,7 @@
-package ru.ssau.tk.Gumirishche.Practic;
+package ru.ssau.tk.Gumirishche.Practic.Collection;
+
+import ru.ssau.tk.Gumirishche.Practic.Collection.Location;
+import ru.ssau.tk.Gumirishche.Practic.Collection.Settlement;
 
 public class Waypoint extends Location {
     private WaypointType type;

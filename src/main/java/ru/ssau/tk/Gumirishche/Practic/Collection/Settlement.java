@@ -1,4 +1,6 @@
-package ru.ssau.tk.Gumirishche.Practic;
+package ru.ssau.tk.Gumirishche.Practic.Collection;
+
+import ru.ssau.tk.Gumirishche.Practic.Collection.Location;
 
 public class Settlement extends Location {
     private int settlement;

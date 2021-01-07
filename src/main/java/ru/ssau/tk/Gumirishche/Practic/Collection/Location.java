@@ -1,4 +1,4 @@
-package ru.ssau.tk.Gumirishche.Practic;
+package ru.ssau.tk.Gumirishche.Practic.Collection;
 
 public abstract class Location {
     private int id;
