@@ -1,8 +1,9 @@
 package ru.ssau.tk.Gumirishche.Practic.Collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Route {
+public class Route implements Iterable<Location>{
     private ArrayList<Location> locations=new ArrayList<>();
 
     public ArrayList<Location> getLocation() {
@@ -19,5 +20,18 @@ public class Route {
 
     public void deleteLocation(int index){
         this.locations.remove(index);
+    }
+
+    public Location getFirstLocation(){
+        return locations.get(0);
+    }
+
+    public Location getLastLocation(){
+        return locations.get(locations.size()-1);
+    }
+
+    @Override
+    public Iterator<Location> iterator() {
+        return locations.iterator();
     }
 }
