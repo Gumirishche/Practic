@@ -1,6 +1,8 @@
 package ru.ssau.tk.Gumirishche.Practic.Collection;
 
-public abstract class Location {
+import java.util.Objects;
+
+public class Location {
     private int id;
     private String name;
     private double latitude;
@@ -47,5 +49,22 @@ public abstract class Location {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Location location = (Location) o;
+        return id == location.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
